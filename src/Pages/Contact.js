@@ -1,11 +1,8 @@
-import React from 'react'
+// cover home career stack project contact
+import React from "react";
 
 const Contact = () => {
-    return (
-        <div>
-            Contact Pages
-        </div>
-    )
-}
+  return <div>Contact Pages</div>;
+};
 
-export default Contact
+export default Contact;

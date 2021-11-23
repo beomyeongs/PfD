@@ -1,11 +1,8 @@
-import React from 'react'
+// cover home career stack project contact
+import React from "react";
 
 const Career = () => {
-    return (
-        <div>
-            Career Pages
-        </div>
-    )
-}
+  return <div>Career Pages</div>;
+};
 
-export default Career
+export default Career;
