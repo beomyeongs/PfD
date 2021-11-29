@@ -6,18 +6,22 @@ import Career from "Pages/Career";
 import Stack from "Pages/Stack";
 import Project from "Pages/Project";
 import Contact from "Pages/Contact";
+import Sidebar from "Layers/Sidebar";
+import Middle from "Layers/Middle";
 
 const Router = () => {
   return (
     <BrowserRouter>
-      <Routes>
+      {/* <Routes>
         <Route exact path="/" element={<Cover />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/career" element={<Career />}></Route>
         <Route path="/stack" element={<Stack />}></Route>
         <Route path="/project" element={<Project />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-      </Routes>
+      </Routes> */}
+      <Sidebar />
+      <Middle />
     </BrowserRouter>
   );
 };

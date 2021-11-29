@@ -2,7 +2,14 @@
 import React from "react";
 
 const Stack = () => {
-  return <div>Stack pages</div>;
+  const scroll = (e) => {
+    console.log(e);
+  };
+  return (
+    <div className="content stack" onScroll={(e) => scroll(e)}>
+      Stack pages
+    </div>
+  );
 };
 
 export default Stack;
