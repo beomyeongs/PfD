@@ -1,0 +1,4 @@
+.section {
+    display: grid;
+    grid: repeat(2, 250px) / auto-flow 350px;
+}
