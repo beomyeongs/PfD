@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Career = () => {
-    return (
-        <div>
-            Career Pages
-        </div>
-    )
-}
+  return <div className="inner">3.Career Pages</div>;
+};
 
-export default Career
+export default Career;

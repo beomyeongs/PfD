@@ -1,5 +1,3 @@
-import { Link } from "react-scroll";
-
 const Dot = ({ num, scrollIndex }) => {
   return (
     <div
@@ -15,11 +13,9 @@ const Dot = ({ num, scrollIndex }) => {
     ></div>
   );
 };
-const click = (e) => {
-  console.log(e);
-  console.log("dotclick");
-};
+
 const Dots = ({ scrollIndex }) => {
+  console.log(scrollIndex);
   return (
     <div style={{ position: "fixed", top: "50%", right: 100 }}>
       <div
@@ -32,15 +28,24 @@ const Dots = ({ scrollIndex }) => {
           height: 100,
         }}
       >
-        <Link to="1" spy={true} smooth={true}>
-          <Dot num={1} scrollIndex={scrollIndex} onClick={click}></Dot>
-        </Link>
-        <Link to="2" spy={true} smooth={true}>
-          <Dot num={2} scrollIndex={scrollIndex}></Dot>
-        </Link>
-        <Link to="3" spy={true} smooth={true}>
-          <Dot num={3} scrollIndex={scrollIndex}></Dot>
-        </Link>
+        <div to="1" spy={true} smooth={true}>
+          <Dot num={1} scrollIndex={scrollIndex} />
+        </div>
+        <div to="2" spy={true} smooth={true}>
+          <Dot num={2} scrollIndex={scrollIndex} />
+        </div>
+        <div to="3" spy={true} smooth={true}>
+          <Dot num={3} scrollIndex={scrollIndex} />
+        </div>
+        <div to="4" spy={true} smooth={true}>
+          <Dot num={4} scrollIndex={scrollIndex} />
+        </div>
+        <div to="5" spy={true} smooth={true}>
+          <Dot num={5} scrollIndex={scrollIndex} />
+        </div>
+        <div to="6" spy={true} smooth={true}>
+          <Dot num={6} scrollIndex={scrollIndex} />
+        </div>
       </div>
     </div>
   );

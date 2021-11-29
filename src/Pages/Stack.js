@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Stack = () => {
-    return (
-        <div>
-            Stack pages
-        </div>
-    )
-}
+  return <div className="inner">4.Stack pages</div>;
+};
 
-export default Stack
+export default Stack;

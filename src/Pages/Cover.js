@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Cover = () => {
-    return (
-        <div>
-            Cover Pages
-        </div>
-    )
-}
+  return <div className="inner">1.Cover Pages</div>;
+};
 
-export default Cover
+export default Cover;

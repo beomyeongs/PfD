@@ -3,7 +3,12 @@ import { useState, useEffect, useRef } from "react";
 import Dots from "./Dots";
 
 import "./App.css";
-
+import Cover from "Pages/Cover";
+import Home from "Pages/Home";
+import Career from "Pages/Career";
+import Stack from "Pages/Stack";
+import Project from "Pages/Project";
+import Contact from "Pages/Contact";
 const DIVIDER_HEIGHT = 5;
 
 function App() {
@@ -36,45 +41,43 @@ function App() {
             behavior: "smooth",
           });
           setScrollIndex(3);
-        } else {
+        } else if (scrollTop >= pageHeight * 2 && scrollTop < pageHeight * 3) {
           // 현재 3페이지
+          console.log(scrollTop);
+          console.log(pageHeight);
           console.log("현재 3페이지, down");
           outerDivRef.current.scrollTo({
-            top: pageHeight * 2 + DIVIDER_HEIGHT * 2,
+            top: pageHeight * 3 + DIVIDER_HEIGHT * 3,
             left: 0,
             behavior: "smooth",
           });
-          setScrollIndex(3);
-        }
-      } else {
-        // 스크롤 올릴 때
-        if (scrollTop >= 0 && scrollTop < pageHeight) {
-          //현재 1페이지
-          console.log("현재 1페이지, up");
+          setScrollIndex(4);
+        } else if (scrollTop >= pageHeight * 3 && scrollTop < pageHeight * 4) {
+          // 현재 4페이지
+          console.log("현재 4페이지, down");
           outerDivRef.current.scrollTo({
-            top: 0,
+            top: pageHeight * 4 + DIVIDER_HEIGHT * 4,
             left: 0,
             behavior: "smooth",
           });
-          setScrollIndex(1);
-        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
-          //현재 2페이지
-          console.log("현재 2페이지, up");
+          setScrollIndex(5);
+        } else if (scrollTop >= pageHeight * 4 && scrollTop < pageHeight * 5) {
+          // 현재 5페이지
+          console.log("현재 5페이지, down");
           outerDivRef.current.scrollTo({
-            top: 0,
+            top: pageHeight * 5 + DIVIDER_HEIGHT * 5,
             left: 0,
             behavior: "smooth",
           });
-          setScrollIndex(1);
+          setScrollIndex(6);
         } else {
-          // 현재 3페이지
-          console.log("현재 3페이지, up");
+          console.log("현재 6페이지");
           outerDivRef.current.scrollTo({
-            top: pageHeight + DIVIDER_HEIGHT,
+            top: pageHeight * 6 + DIVIDER_HEIGHT * 6,
             left: 0,
             behavior: "smooth",
           });
-          setScrollIndex(2);
+          setScrollIndex(6);
         }
       }
     };
@@ -87,17 +90,17 @@ function App() {
   return (
     <div ref={outerDivRef} className="outer">
       <Dots scrollIndex={scrollIndex} />
-      <div id="1" className="inner bg-yellow">
-        1
-      </div>
+      <Cover />
       <div className="divider"></div>
-      <div id="2" className="inner bg-blue">
-        2
-      </div>
+      <Home />
       <div className="divider"></div>
-      <div id="3" className="inner bg-pink">
-        3
-      </div>
+      <Career />
+      <div className="divider"></div>
+      <Stack />
+      <div className="divider"></div>
+      <Project />
+      <div className="divider"></div>
+      <Contact />
     </div>
   );
 }
