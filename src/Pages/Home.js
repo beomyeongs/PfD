@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
   console.log("홈지나갑니다");
   const handleWheel = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     console.log(e);
     console.log(e.deltaY);
     setCurrent(e.deltaY);

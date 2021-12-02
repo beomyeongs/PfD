@@ -1,21 +1,21 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { Link } from "react-scroll";
 
-const SideDiv = styled.div`
-  width: 10%;
-  position: fixed;
-  right: 5rem;
-  margin-top: 70px;
-  div {
-    display: flex;
-    flex-direction: column;
-  }
-`;
+// const SideDiv = styled.div`
+//   width: 10%;
+//   position: fixed;
+//   right: 5rem;
+//   margin-top: 70px;
+//   div {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// `;
 
 const Sidebar = () => {
   return (
-    <SideDiv>
+    <div>
       <div>
         <Link to="1" spy={true} smooth={true}>
           <span>Day 1</span>
@@ -30,7 +30,7 @@ const Sidebar = () => {
           <span>Day 4</span>
         </Link>
       </div>
-    </SideDiv>
+    </div>
   );
 };
 
