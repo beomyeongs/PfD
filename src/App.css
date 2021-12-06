@@ -15,9 +15,12 @@ h2 {
   height: 100vh;
   width: 100vw;
   transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* overflow-y: scroll;
+  scroll-snap-type: y mandatory; */
 }
 
 .inner {
+  /* scroll-snap-align: start; */
   display: flex;
   height: 100vh;
 
