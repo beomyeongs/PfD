@@ -4,41 +4,45 @@ const Slider = ({ children }) => {
   const [active, setActive] = useState(0);
   const [pageNum, setPageNum] = useState();
   const [direction, setDirection] = useState("");
+
+  useEffect(() => {
+    let timer;
+    window.addEventListener("wheel", (e) => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        if (e.deltaY > 0) {
+          //scroll wheel down
+          if (direction !== "down") {
+            console.log("down");
+            setDirection("down");
+            // if (active < children.length - 1) setActive((prev) => prev + 1);
+            // console.log(active);
+            goNext();
+          }
+        }
+      }, 500);
+    });
+    return () => {};
+  }, [active]);
   const goPrev = () => {
+    console.log(active);
     if (active >= 0) {
       setActive((prev) => prev - 1);
     }
   };
   const goNext = () => {
+    console.log(active);
     if (active < children.length - 1) {
       setActive((prev) => prev + 1);
     }
-    console.log(active);
   };
   const toTop = () => {
     setActive(0);
   };
   const percentage = -100 * active + "%";
-
-  let timer;
-
-  window.addEventListener("wheel", (e) => {
-    if (timer) {
-      clearTimeout(timer);
-    }
-    timer = setTimeout(() => {
-      if (e.deltaY > 0) {
-        //scroll wheel down
-        if (direction !== "down") {
-          console.log("down");
-          setDirection("down");
-
-          goNext();
-        }
-      }
-    }, 500);
-  });
-
+  console.log(active);
   return (
     <div>
       <div
