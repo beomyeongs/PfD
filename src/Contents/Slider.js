@@ -35,6 +35,14 @@ const Slider = ({ children }) => {
 
           goNext();
         }
+      } else {
+        //scroll wheel up
+        if (direction !== "up") {
+          console.log("up");
+          setDirection("up");
+
+          goPrev();
+        }
       }
     }, 500);
   });
