@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Slider = ({ children }) => {
   const [active, setActive] = useState(0);
-  const [pageNum, setPageNum] = useState();
+  const [pageNum, setPageNum] = useState(0);
   const [direction, setDirection] = useState("");
 
   useEffect(() => {
@@ -13,19 +13,14 @@ const Slider = ({ children }) => {
       }
       timer = setTimeout(() => {
         if (e.deltaY > 0) {
-          //scroll wheel down
-          if (direction !== "down") {
-            console.log("down");
-            setDirection("down");
-            // if (active < children.length - 1) setActive((prev) => prev + 1);
-            // console.log(active);
-            goNext();
-          }
+          goNext();
+        } else {
+          goPrev();
         }
       }, 500);
     });
     return () => {};
-  }, [active]);
+  }, []);
   const goPrev = () => {
     console.log(active);
     if (active >= 0) {
@@ -41,8 +36,11 @@ const Slider = ({ children }) => {
   const toTop = () => {
     setActive(0);
   };
+
   const percentage = -100 * active + "%";
   console.log(active);
+  // if (active > 6) {
+  // }
   return (
     <div>
       <div

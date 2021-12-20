@@ -1,9 +1,11 @@
 .career {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
+  justify-content: center;
   &__section {
     display: grid;
-    grid: repeat(2, 250px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }

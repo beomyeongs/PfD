@@ -22,9 +22,10 @@ h2 {
 .inner {
   /* scroll-snap-align: start; */
   display: flex;
+  width: 100vw;
   height: 100vh;
-
-  /* color: white; */
+  flex-direction: column;
+  color: white;
   justify-content: center;
   align-items: center;
   background-size: cover;
