@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 
 const Slider = ({ children }) => {
   const [active, setActive] = useState(0);
-  const [pageNum, setPageNum] = useState(0);
-  const [direction, setDirection] = useState("");
 
   useEffect(() => {
     let timer;
