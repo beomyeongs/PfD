@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-
+import { RecoilRoot } from "recoil";
 import Dots from "./Dots";
 
 import "./App.css";
@@ -10,11 +10,11 @@ import Career from "Pages/Career";
 import Stack from "Pages/Stack";
 import Project from "Pages/Project";
 import Contact from "Pages/Contact";
-const DIVIDER_HEIGHT = 5;
+// const DIVIDER_HEIGHT = 5;
 
 function App() {
   return (
-    <div className="App">
+    <RecoilRoot>
       <Slider>
         <Cover />
         <Home />
@@ -23,7 +23,7 @@ function App() {
         <Project />
         <Contact />
       </Slider>
-    </div>
+    </RecoilRoot>
   );
 }
 
