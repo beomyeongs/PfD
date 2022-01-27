@@ -1,10 +1,11 @@
-import "./common.scss";
-import Router from "./Router/Router";
+import "./App.css";
+import "./common.css";
 
+import Scroller from "Layers/Scroller";
 function App() {
   return (
     <div className="App">
-      <Router />
+      <Scroller />
     </div>
   );
 }

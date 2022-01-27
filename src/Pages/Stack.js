@@ -6,7 +6,7 @@ const Stack = () => {
     console.log(e);
   };
   return (
-    <div className="content stack" onScroll={(e) => scroll(e)}>
+    <div className="component stack" onScroll={(e) => scroll(e)}>
       Stack pages
     </div>
   );
