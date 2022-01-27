@@ -5,7 +5,7 @@ import "Css/Stack.scss";
 
 const Stack = () => {
   return (
-    <div className="inner stack">
+    <div className="component stack">
       <h1>기술 스택 페이지</h1>
       <div className="stack__section">
         <StackCard src={icon.react} />

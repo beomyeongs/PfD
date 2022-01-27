@@ -1,7 +1,8 @@
+// cover home career stack project contact
 import React from "react";
 
 const Home = () => {
-  return <div className="inner home">2.Home Pages</div>;
+  return <div className="component home">Home Pages</div>;
 };
 
 export default Home;

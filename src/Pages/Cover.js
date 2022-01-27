@@ -1,7 +1,8 @@
+// cover home career stack project contact
 import React from "react";
 
 const Cover = () => {
-  return <div className="inner cover">1.Cover Pages</div>;
+  return <div className="component cover">Cover Pages</div>;
 };
 
 export default Cover;

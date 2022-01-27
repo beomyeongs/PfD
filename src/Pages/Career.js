@@ -3,7 +3,7 @@ import React from "react";
 import "Css/Career.scss";
 const Career = () => {
   return (
-    <div className="inner career">
+    <div className="component career">
       <h1>활동 이력</h1>
       <div className="career__section">
         <SimpleCard

@@ -1,7 +1,8 @@
+// cover home career stack project contact
 import React from "react";
 
 const Project = () => {
-  return <div className="inner project">5.Project Pages</div>;
+  return <div className="component project">Project Pages</div>;
 };
 
 export default Project;
