@@ -1,0 +1,64 @@
+.header {
+  width: 600px;
+  height: 50px;
+}
+.header p {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 300px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header button {
+  position: absolute;
+  right: 35px;
+  top: 20px;
+}
+
+.body {
+  width: 600px;
+  height: 400px;
+}
+.body table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 450px;
+}
+.body table td:nth-child(1) {
+  border: 1px solid black;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+.body table td:nth-child(2) {
+  border: 1px solid black;
+  width: 250px;
+  height: 50px;
+  padding-left: 2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  vertical-align: middle;
+}
+
+.bottom {
+  width: 600px;
+  height: 50px;
+  align-items: center;
+}
+.bottom button {
+  position: absolute;
+  right: 35px;
+  bottom: 20px;
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: skyblue;
+  text-align: center;
+}

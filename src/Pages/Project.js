@@ -1,8 +1,10 @@
 // cover home career stack project contact
-import React from "react";
+import React, { useState } from "react";
+import ProjectDetail from "Components/ProjectDetail";
+import project from "Json/project";
 
 const Project = () => {
-  return <div className="component project">Project Pages</div>;
+  return <ProjectDetail project={project.one} />;
 };
 
 export default Project;
