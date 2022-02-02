@@ -2,9 +2,22 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import "Css/ProjectDetail.scss";
 
+Modal.setAppElement("#root");
+
 function ProjectDetail({ project }) {
   const [modalTrigger, setModalTrigger] = useState(false);
-  Modal.setAppElement("#root");
+
+  const onModal = () => {
+    console.log("모달 키기");
+    setModalTrigger(true);
+    console.log(modalTrigger);
+  };
+
+  const offModal = () => {
+    console.log("모달 닫기");
+    setModalTrigger(false);
+    console.log(modalTrigger);
+  };
 
   const customStyles = {
     overlay: {
@@ -34,16 +47,14 @@ function ProjectDetail({ project }) {
 
   return (
     <div>
-      <button onClick={() => setModalTrigger(true)}>Open</button>
+      <h1 onClick={onModal}>{project.name}</h1>
       <Modal
         isOpen={modalTrigger}
-        onRequestClose={() => setModalTrigger(false)}
-        shouldCloseOnOverlayClick={false}
+        onRequestClose={offModal}
         style={customStyles}
       >
         <div className="header">
           <p>프로젝트 상세 설명 </p>
-          <button onClick={() => setModalTrigger(false)}>X</button>
         </div>
         <div className="body">
           <table>
@@ -66,7 +77,14 @@ function ProjectDetail({ project }) {
           </table>
         </div>
         <div className="bottom">
-          <button onClick={() => setModalTrigger(false)}>close</button>
+          <button
+            onClick={() => {
+              console.log("닫기 버튼 눌림");
+              offModal();
+            }}
+          >
+            close
+          </button>
         </div>
       </Modal>
     </div>
