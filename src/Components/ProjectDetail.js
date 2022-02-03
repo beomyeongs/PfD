@@ -5,6 +5,7 @@ import "Css/ProjectDetail.scss";
 Modal.setAppElement("#root");
 
 function ProjectDetail({ project }) {
+  console.log(project);
   const [modalTrigger, setModalTrigger] = useState(false);
 
   const onModal = () => {
