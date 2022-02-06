@@ -1,6 +1,7 @@
 import React from "react";
 import StackCard from "Components/StackCard";
 import icon from "Json/icon.json";
+import stack from "Json/stack";
 import "Css/Stack.scss";
 
 const Stack = () => {
@@ -8,14 +9,9 @@ const Stack = () => {
     <div className="component stack">
       <h1>기술 스택 페이지</h1>
       <div className="stack__section">
-        <StackCard src={icon.react} />
-        <StackCard src={icon.spring} />
-        <StackCard src={icon.tf} />
-        <StackCard src={icon.keras} />
-        <StackCard src={icon.pytorch} />
-        <StackCard src={icon.git} />
-        <StackCard src={icon.git} />
-        <StackCard src={icon.git} />
+        {stack.map((data) => (
+          <StackCard src={data} />
+        ))}
       </div>
     </div>
   );

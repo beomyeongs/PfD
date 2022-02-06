@@ -11,7 +11,7 @@ body {
   text-align: center;
 }
 
-.links {
+/* .links {
   display: flex;
   flex-direction: column;
   margin-left: 50px;
@@ -19,12 +19,13 @@ body {
 
 .links .link {
   margin-top: 20px;
-}
+} */
 
 .component {
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .first-component--inside-scroller {
@@ -73,9 +74,14 @@ h2 {
 
 nav {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   gap: 20px;
   grid-template-columns: repeat(6, 1px);
+  /* height: 30px; */
+  width: 50px;
 }
 
 button {
@@ -85,4 +91,9 @@ button {
 .block:hover {
   transform: translate(1.1%);
   color: red;
+}
+
+.scroller {
+  display: flex;
+  flex-direction: row-reverse;
 }

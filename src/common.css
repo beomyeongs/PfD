@@ -1,28 +1,17 @@
-.content {
-  margin: 0;
-  display: block;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 20px;
-}
 .cover {
-  background-color: red;
+  background-color: rgb(221, 211, 211);
   color: white;
-}
-.home {
-  background-color: orange;
 }
 
 .career {
-  background-color: yellow;
+  background-color: rgb(238, 238, 208);
 }
 .stack {
-  background-color: green;
+  background-color: rgb(204, 231, 204);
 }
 .project {
-  background-color: blue;
+  background-color: rgb(182, 182, 223);
 }
 .contact {
-  background-color: palevioletred;
+  background-color: rgb(218, 173, 188);
 }

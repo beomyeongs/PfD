@@ -3,7 +3,6 @@ import React from "react";
 const Header = ({ onPageChange }) => {
   // console.log(onPageChange);
   const handlePageChange = (num) => {
-    console.log(num);
     onPageChange(num);
   };
   return (
@@ -12,18 +11,15 @@ const Header = ({ onPageChange }) => {
         cover
       </button>
       <button className="block" onClick={() => handlePageChange(1)}>
-        home
-      </button>
-      <button className="block" onClick={() => handlePageChange(2)}>
         career
       </button>
-      <button className="block" onClick={() => handlePageChange(3)}>
+      <button className="block" onClick={() => handlePageChange(2)}>
         stack
       </button>
-      <button className="block" onClick={() => handlePageChange(4)}>
+      <button className="block" onClick={() => handlePageChange(3)}>
         project
       </button>
-      <button className="block" onClick={() => handlePageChange(5)}>
+      <button className="block" onClick={() => handlePageChange(4)}>
         contact
       </button>
     </nav>

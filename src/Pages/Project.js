@@ -6,17 +6,12 @@ import project from "Json/project";
 const Project = () => {
   console.log(project);
   return (
-    <div className="">
+    <div className="component project">
       <h1>프로젝트 목록</h1>
-      <div className="">
+      <div>
         {project.map((data) => (
-          <>
-            <ProjectDetail project={data} />
-          </>
+          <ProjectDetail project={data} />
         ))}
-        {/* <ProjectDetail project={project.one} />
-        <ProjectDetail project={project.two} />
-        <ProjectDetail project={project.three} /> */}
       </div>
     </div>
   );
