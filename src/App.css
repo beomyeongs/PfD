@@ -39,15 +39,15 @@ h2 {
   text-align: center;
 }
 
-.pagination-additional-class {
+/* .pagination-additional-class {
   margin: 0;
   position: fixed;
   top: 20px;
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
+} */
+/* 
 .pagination-additional-class > li:not(:last-of-type) > a,
 .pagination-additional-class > li:not(:last-of-type) > span {
   margin-right: 50px;
@@ -70,9 +70,10 @@ h2 {
   .pagination-additional-class > li:not(:last-of-type) > span {
     margin-right: 5px;
   }
-}
+} */
 
 nav {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,19 +81,43 @@ nav {
   text-align: center;
   gap: 20px;
   grid-template-columns: repeat(6, 1px);
-  /* height: 30px; */
-  width: 50px;
+  height: 100vh;
+  width: 10%;
 }
 
 button {
   all: unset;
 }
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 
-.block:hover {
-  transform: translate(1.1%);
-  color: red;
+  background-color: black;
 }
 
+.active {
+  background-color: red;
+  transition: background-color 0.2s;
+}
+
+.dot:hover {
+  background: blue;
+}
+
+.pageNum {
+  position: fixed;
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: all 5s; */
+  font-size: large;
+}
 .scroller {
   display: flex;
   flex-direction: row-reverse;
