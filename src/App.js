@@ -1,6 +1,5 @@
 import React from "react";
-import "./App.css";
-import "./common.css";
+import "./Css/App.scss";
 
 import Scroller from "Layers/Scroller";
 function App() {
