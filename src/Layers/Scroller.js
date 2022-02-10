@@ -6,6 +6,7 @@ import Career from "../Pages/Career";
 import Stack from "../Pages/Stack";
 import Project from "../Pages/Project";
 import Contact from "../Pages/Contact";
+import PageNum from "./PageNum";
 const Scroller = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -29,6 +30,7 @@ const Scroller = () => {
         <Contact />
       </ReactPageScroller>
       <Dots onPageChange={handlePageChange} pageNum={currentPage} />
+      <PageNum pageNum={currentPage} />
     </div>
   );
 };
