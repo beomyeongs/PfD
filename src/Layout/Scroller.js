@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactPageScroller from "react-page-scroller";
-import Dots from "Layers/Dots";
+import Dots from "./Dots";
 import Cover from "../Pages/Cover";
 import Career from "../Pages/Career";
 import Stack from "../Pages/Stack";
