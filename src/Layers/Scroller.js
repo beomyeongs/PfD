@@ -6,6 +6,8 @@ import Career from "../Pages/Career";
 import Stack from "../Pages/Stack";
 import Project from "../Pages/Project";
 import Contact from "../Pages/Contact";
+import Progress from "Layers/Progress";
+
 const Scroller = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -17,6 +19,7 @@ const Scroller = () => {
   };
   return (
     <div className="scroller">
+      <Progress page={currentPage} />
       <Header onPageChange={handlePageChange} />
       <ReactPageScroller
         pageOnChange={handlePageChange}
