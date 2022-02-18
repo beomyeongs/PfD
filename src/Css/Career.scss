@@ -1,9 +1,14 @@
+@import "./variable.scss";
 .career {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-blend-mode: multiply;
+  background: $lightMainColor url("../image/bg2.jpg");
+  background-size: cover;
+  // animation: displace 3s linear infinite;
 
   &__section {
     width: 80%;
@@ -23,5 +28,13 @@
 
   > button:disabled {
     color: gray;
+  }
+}
+@keyframes displace {
+  from {
+    background-position: center 0;
+  }
+  to {
+    background-position: center 1200px;
   }
 }
