@@ -1,6 +1,8 @@
+@import "./variable.scss";
 .cover {
   height: 100vh;
   display: flex;
+  //   background-color: rgb(199, 199, 201);
   //   flex-direction: row;
   &__left {
     flex: 1;
@@ -46,7 +48,7 @@
       height: 50px;
       font-size: 30px;
       font-weight: bold;
-      color: #595959;
+      color: #3586ff;
       display: flex;
       align-items: center;
     }
