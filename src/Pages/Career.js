@@ -1,7 +1,7 @@
 import CareerCard from "Components/CareerCard";
 import React, { useState, useEffect } from "react";
 import "Css/Career.scss";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import career from "../Json/career.json";
 const Career = (props) => {
   const [page, setPage] = useState(1);
@@ -14,29 +14,31 @@ const Career = (props) => {
   }, []);
 
   return (
-    <div className="component career">
-      <h1>활동 이력</h1>
-      <div className="arrowBtn">
-        <button
-          onClick={() => {
-            setPage(page - 1);
-            setDirection("left");
-          }}
-          disabled={page === 1}
-        >
-          <FaArrowLeft size="24px" />
-        </button>
-        {page}/{lastPage}
-        <button
-          onClick={() => {
-            setPage(page + 1);
-            setDirection("right");
-          }}
-          disabled={page === lastPage}
-        >
-          <FaArrowRight size="24px" />
-        </button>
-      </div>
+    <div className="career">
+      <h1>
+        활동 이력 ({page} / {lastPage})
+      </h1>
+      <button
+        className="arrowBtn left"
+        onClick={() => {
+          setPage(page - 1);
+          setDirection("left");
+        }}
+        disabled={page === 1}
+      >
+        <FaAngleLeft size="100px" />
+      </button>
+
+      <button
+        className="arrowBtn right"
+        onClick={() => {
+          setPage(page + 1);
+          setDirection("right");
+        }}
+        disabled={page === lastPage}
+      >
+        <FaAngleRight size="100px" />
+      </button>
       <div className="career__section">
         {career.map((d, index) => (
           <>
