@@ -1,11 +1,59 @@
+@import "./variable.scss";
 .career {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-blend-mode: multiply;
+  background: $lightMainColor url("../image/bg2.jpg");
+  background-size: cover;
+  position: relative;
+  // animation: displace 3s linear infinite;
+
   &__section {
+    width: 80%;
+    height: 80%;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-row-gap: 20px;
+    justify-content: center;
+    transition: all 2s;
+  }
+  .arrowBtn {
+    // width: 80%;
+    // display: flex;
+    // justify-content: space-between;
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    &.left {
+      left: 100px;
+    }
+    &.right {
+      right: 100px;
+    }
+  }
+
+  > button {
+    > svg {
+      :hover {
+        fill: $pointColor;
+      }
+    }
+  }
+  > button:disabled {
+    color: gray;
+  }
+}
+
+@keyframes displace {
+  from {
+    background-position: center 0;
+  }
+  to {
+    background-position: center 1200px;
   }
 }

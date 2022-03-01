@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import ReactPageScroller from "react-page-scroller";
-import Header from "Layers/Header";
+import Dots from "./Dots";
 import Cover from "../Pages/Cover";
 import Career from "../Pages/Career";
 import Stack from "../Pages/Stack";
 import Project from "../Pages/Project";
 import Contact from "../Pages/Contact";
+import PageNum from "./PageNum";
 const Scroller = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -17,7 +18,6 @@ const Scroller = () => {
   };
   return (
     <div className="scroller">
-      <Header onPageChange={handlePageChange} />
       <ReactPageScroller
         pageOnChange={handlePageChange}
         onBeforePageScroll={handleBeforePageChange}
@@ -29,6 +29,8 @@ const Scroller = () => {
         <Project />
         <Contact />
       </ReactPageScroller>
+      <Dots onPageChange={handlePageChange} pageNum={currentPage} />
+      <PageNum pageNum={currentPage} />
     </div>
   );
 };
