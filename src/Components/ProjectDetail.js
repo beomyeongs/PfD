@@ -47,47 +47,60 @@ function ProjectDetail({ project }) {
   };
 
   return (
-    <div>
-      <h1 onClick={onModal}>{project.name}</h1>
-      <Modal
-        isOpen={modalTrigger}
-        onRequestClose={offModal}
-        style={customStyles}
-      >
-        <div className="header">
-          <p>프로젝트 상세 설명 </p>
-        </div>
-        <div className="body">
-          <table>
-            <tr>
-              <td>프로젝트 이름</td>
-              <td>{project.name}</td>
-            </tr>
-            <tr>
-              <td>프로젝트 내용</td>
-              <td>{project.content}</td>
-            </tr>
-            <tr>
-              <td>기술 스택</td>
-              <td>{use_for(project.tech_stack)}</td>
-            </tr>
-            <tr>
-              <td>맡은 업무</td>
-              <td>{use_for(project.did)}</td>
-            </tr>
-          </table>
-        </div>
-        <div className="bottom">
-          <button
-            onClick={() => {
-              console.log("닫기 버튼 눌림");
-              offModal();
-            }}
+    <div className="projectDetail">
+      {project && (
+        <>
+          <div onClick={onModal}>
+            <h1
+              // onClick={() => console.log("모달누름")}
+              className="projectDetail__name"
+            >
+              {project.name}
+
+              <h6>{project.content}</h6>
+            </h1>
+          </div>
+          <Modal
+            isOpen={modalTrigger}
+            onRequestClose={offModal}
+            style={customStyles}
           >
-            close
-          </button>
-        </div>
-      </Modal>
+            <div className="header">
+              <p>프로젝트 상세 설명 </p>
+            </div>
+            <div className="body">
+              <table>
+                <tr>
+                  <td>프로젝트 이름</td>
+                  <td>{project.name}</td>
+                </tr>
+                <tr>
+                  <td>프로젝트 내용</td>
+                  <td>{project.content}</td>
+                </tr>
+                <tr>
+                  <td>기술 스택</td>
+                  <td>{use_for(project.tech_stack)}</td>
+                </tr>
+                <tr>
+                  <td>맡은 업무</td>
+                  <td>{use_for(project.did)}</td>
+                </tr>
+              </table>
+            </div>
+            <div className="bottom">
+              <button
+                onClick={() => {
+                  console.log("닫기 버튼 눌림");
+                  offModal();
+                }}
+              >
+                close
+              </button>
+            </div>
+          </Modal>
+        </>
+      )}
     </div>
   );
 }
