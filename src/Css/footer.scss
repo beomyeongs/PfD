@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.contact {
+.footer {
   position: relative;
   min-height: 100vh;
   padding: 50px 100px;
@@ -14,17 +14,19 @@
   background: url(https://images.pexels.com/photos/998499/pexels-photo-998499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
   background-size: cover;
   background-repeat: no-repeat;
+
+  .content {
+    max-width: 800px;
+    text-align: center;
+  }
 }
-.contact .content {
-  max-width: 800px;
-  text-align: center;
-}
-.contact .content h1 {
+
+.footer .content h1 {
   font-size: 36px;
   font-weight: 500;
   color: #fff;
 }
-.contact .content p {
+.footer .content p {
   font-weight: 300;
   color: #fff;
 }

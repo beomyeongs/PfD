@@ -11,7 +11,7 @@ import {
 function Footer() {
   return (
     <body>
-      <section class="contact">
+      <section class="footer">
         <div class="content">
           <h1>
             Contact Me
