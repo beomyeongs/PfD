@@ -1,0 +1,87 @@
+@import "./variable.scss";
+.project {
+  width: 100vw;
+  height: 100vh;
+
+  //   background-color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  //   .arrow {
+  //     height: 100px;
+  //     position: absolute;
+  //     cursor: pointer;
+  //     &.left {
+  //       left: 100px;
+  //     }
+  //     &.right {
+  //       right: 100px;
+  //     }
+  //   }
+
+  //   > button {
+  //     > svg {
+  //       :hover {
+  //         fill: rgb(76, 76, 189);
+  //       }
+  //     }
+  //   }
+  //   > button:disabled {
+  //     color: gray;
+  //   }
+  .slider {
+    height: 350px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    .container {
+      width: 100vw;
+      display: grid;
+
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      .item {
+        width: 700px;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 20px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        // flex-direction: row;
+        .left {
+          flex: 4;
+          height: 100%;
+          // background-color: yellowgreen;
+          //   border-radius: 20px;
+        }
+        .right {
+          flex: 8;
+          height: 100%;
+          // background-color: yellow;
+        }
+      }
+    }
+  }
+}
+
+// .arrowBtn {
+//   height: 100%;
+//   width: 90%;
+//   //   position: absolute;
+//   display: flex;
+
+//   > button {
+//     > svg {
+//       :hover {
+//         fill: rgb(76, 76, 189);
+//       }
+//     }
+//   }
+// }
