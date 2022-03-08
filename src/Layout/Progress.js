@@ -3,7 +3,7 @@ import "Css/Progress.scss";
 
 function Progress({ page }) {
   var width = window.innerWidth;
-  var now = (window.innerWidth / 5) * (page + 1);
+  var now = (window.innerWidth / 4) * (page + 1);
 
   return (
     <div className="progress-div" style={{ width: width }}>

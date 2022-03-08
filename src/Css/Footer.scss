@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 .footer {
   position: relative;
   min-height: 100vh;
@@ -81,12 +80,4 @@
   .container .contactInfo {
     width: 100%;
   }
-}
-.contact__img {
-  width: 30vw;
-  height: 30vw;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  // z-index: 1;
 }

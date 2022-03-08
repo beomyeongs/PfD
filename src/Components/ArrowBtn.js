@@ -10,7 +10,7 @@ const ArrowBtn = ({ page, setPage, direction, setDirection, lastPage }) => {
           setPage(page - 1);
           setDirection("left");
         }}
-        disabled={page === 1}
+        disabled={page === 0}
       >
         <FaAngleLeft size="100px" />
       </button>

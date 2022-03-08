@@ -48,13 +48,13 @@ const TechGraph = () => {
   return (
     <div>
       <h1>프로젝트에서 사용한 기술 스택</h1>
-      <ResponsiveContainer width={800} height={800}>
-        <PieChart width={800} height={800}>
+      <ResponsiveContainer width={400} height={400}>
+        <PieChart width={400} height={400}>
           <Pie
             dataKey="count"
             data={data}
-            cx={400}
-            cy={400}
+            cx={200}
+            cy={200}
             outerRadius={80}
             fill="#8884d8"
             labelLine={false}

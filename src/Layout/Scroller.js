@@ -3,7 +3,6 @@ import ReactPageScroller from "react-page-scroller";
 import Dots from "./Dots";
 import Cover from "../Pages/Cover";
 import Career from "../Pages/Career";
-import Stack from "../Pages/Stack";
 import Project from "../Pages/Project";
 import Contact from "../Pages/Contact";
 import Progress from "Layout/Progress";
@@ -29,7 +28,6 @@ const Scroller = () => {
       >
         <Cover />
         <Career />
-        <Stack />
         <Project />
         <Contact />
       </ReactPageScroller>

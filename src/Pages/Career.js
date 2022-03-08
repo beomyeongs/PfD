@@ -5,8 +5,8 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import career from "../Json/career.json";
 import ArrowBtn from "Components/ArrowBtn";
 const Career = (props) => {
-  const [page, setPage] = useState(1);
-  const lastPage = parseInt(career.length / 3) + 1;
+  const [page, setPage] = useState(0);
+  const lastPage = parseInt(career.length / 3);
   const [direction, setDirection] = useState("right");
   useEffect(() => {
     setPage(1);
@@ -17,7 +17,7 @@ const Career = (props) => {
   return (
     <div className="career">
       <h1>
-        활동 이력 ({page} / {lastPage})
+        활동 이력 ({page + 1} / {lastPage})
       </h1>
 
       <ArrowBtn
@@ -29,7 +29,7 @@ const Career = (props) => {
       <div className="career__section">
         {career.map((d, index) => (
           <>
-            {index < page * 3 && index >= (page - 1) * 3 && (
+            {index < (page + 1) * 3 && index >= page * 3 && (
               <CareerCard
                 name={d.name}
                 term={d.term}
