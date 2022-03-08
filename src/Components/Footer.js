@@ -7,7 +7,6 @@ import {
   faPhone,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
-
 function Footer() {
   return (
     <body>

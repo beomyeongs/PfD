@@ -22,7 +22,7 @@ const Dots = ({ onPageChange, pageNum }) => {
   // console.log(dotArr);
   return (
     <nav>
-      {[...Array(5)].map((e, i) => (
+      {[...Array(4)].map((e, i) => (
         <div>
           <Dot pageNum={pageNum} index={i} onPageNum={handlePageChange} />
         </div>
