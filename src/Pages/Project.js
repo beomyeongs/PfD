@@ -19,8 +19,17 @@ const Project = () => {
   console.log(empthyContent, "empthy");
   return (
     <div className="project">
-      <div className="project__slider">
-        <div className="project__slider__container">
+      <div className="slider">
+        <div className="container">
+          <div className="item">
+            {project.map((data, index) => (
+              <>
+                {parseInt(index / 4) === page - 1 && (
+                  <ProjectDetail project={data} />
+                )}
+              </>
+            ))}
+          </div>
           {lastPage > 1 && (
             <>
               <h1>
@@ -34,15 +43,6 @@ const Project = () => {
               />
             </>
           )}
-          <div className="project__slider__container__item">
-            {project.map((data, index) => (
-              <>
-                {parseInt(index / 4) === page - 1 && (
-                  <ProjectDetail project={data} />
-                )}
-              </>
-            ))}
-          </div>
         </div>
       </div>
       {/* <button
