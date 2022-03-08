@@ -9,7 +9,7 @@ const Career = (props) => {
   const lastPage = parseInt(career.length / 3);
   const [direction, setDirection] = useState("right");
   useEffect(() => {
-    setPage(1);
+    setPage(0);
     console.log("렌더링됨");
     return () => {};
   }, []);
