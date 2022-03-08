@@ -30,20 +30,20 @@
   //   > button:disabled {
   //     color: gray;
   //   }
-  &__slider {
-    height: 500px;
+  .slider {
+    height: 350px;
     display: flex;
     position: absolute;
     left: 0;
-    &__container {
+    .container {
       width: 100vw;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+
       align-items: center;
       justify-content: center;
       justify-items: center;
       align-content: center;
-      &__item {
+      .item {
         width: 700px;
         height: 100%;
         background-color: #fff;

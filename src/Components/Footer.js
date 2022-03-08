@@ -7,7 +7,7 @@ import {
   faPhone,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
-import image from "../image/jiyeong2.png";
+
 function Footer() {
   return (
     <body>
@@ -50,7 +50,6 @@ function Footer() {
             </div>
           </div>
         </div>
-        <img src={image} alt="" className="contact__img" />
       </section>
     </body>
   );

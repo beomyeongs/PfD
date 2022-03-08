@@ -1,12 +1,18 @@
 import React from "react";
+import StackCard from "Components/StackCard";
+import icon from "Json/icon.json";
+import stack from "Json/stack";
 import "Css/Stack.scss";
-import TechGraph from "Components/TechGraph";
 
 const Stack = () => {
   return (
-    <div>
+    <div className="component stack">
       <h1>기술 스택 페이지</h1>
-      <TechGraph />
+      <div className="stack__section">
+        {stack.map((data) => (
+          <StackCard src={data} />
+        ))}
+      </div>
     </div>
   );
 };
