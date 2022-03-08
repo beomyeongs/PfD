@@ -1,7 +1,7 @@
 // cover home career stack project contact
 import React from "react";
 import "../Css/Cover.scss";
-import image from "../image/person.png";
+import image from "../image/jiyeong.png";
 const Cover = () => {
   return (
     <div className="cover">
